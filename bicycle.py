@@ -4,20 +4,19 @@ A Bicycle cipher encrypter/decrypter.
 The Bicycle cipher is a simple, time-based cipher built on top of a
 Caesar cipher. It uses three steps to encrypt text:
 
-STEP 1: Cipher the whole text using a Caesar cipher with the current
-        day of the month as the key.
-STEP 2: Cipher every odd alphabetical character using the current month
-        as the key and every even alphabetical character using the
-        current year as the key. Non-alphabetical characters are ignored
-        and not indexed.
-STEP 3: Reverse the text.
+STEP 1: The whole text is ciphered using a Caesar cipher with the
+current day of the month as the key (1~31).
+STEP 2: Every odd alphabetical character is ciphered using the current
+month as the key (1~12) and every even alphabetical character using the
+current year as the key (e.g., 2025). Non-alphabetical characters are
+ignored and not indexed.
+STEP 3: The text is reversed.
 
 Note: this cipher is intended for fun purposes only.
 """
 
 import string
 import datetime
-import traceback
 from datetime import timedelta
 
 import caesar
@@ -96,8 +95,8 @@ def clock_cipher(plaintext: str,
             The date on which the encryption is based.
             - If an int is provided, it represents the number of days
               offset from today.
-            - If an iterable is provided, the first three values must be
-              in the form (year, month, day).
+            - If a tuple or list is provided, the first three values must be
+              in the form (YYYY, MM, DD)/[YYYY, MM, DD].
             - If a datetime.date object is provided, it is used directly.
 
     Returns:
@@ -144,7 +143,8 @@ def clock_decipher(ciphertext: str,
             The date on which the ciphertext was originally encrypted.
             - If an int is provided, it represents the number of days
               offset from today.
-            - If a tuple is provided, it must be in the form (year, month, day).
+            - If a tuple or list is provided, the first three values must be
+              in the form (YYYY, MM, DD)/[YYYY, MM, DD].
             - If a datetime.date object is provided, it is used directly.
 
     Returns:
@@ -199,6 +199,7 @@ def _alternating_cipher(step1: str, encrypt: bool, m: int, y: int) -> str:
 
 if __name__ == "__main__":
     import sys
+    import traceback
     from time import sleep
 
 
@@ -232,7 +233,7 @@ if __name__ == "__main__":
             "- Enter a forward slash ('/') at any time to switch between cipher/decipher.\n"
             "- Enter '*' at any time to toggle clock mode.\n"
             "- Enter 'q' at any time to quit.\n"
-            "- TIP: Triple click output text to easily select (and copy) the whole line.\n"  
+            "- TIP: Triple-click output text to easily select (and copy) the whole line.\n"  
             "* --------------------------------------- *"
         )
 

@@ -67,12 +67,13 @@ The date on which the ciphertext was originally encrypted with.
 Run `bicycle.py` directly to execute the example program.
 
 ```
+import sys
+import traceback
+from time import sleep
+
+from bicycle import *
+
 if __name__ == "__main__":
-    import sys
-    import traceback
-    from time import sleep
-
-
     def print_encrypting(encr: bool) -> None:
         print(f"\n{'🔐' if encr else '🔓'}"
               f" ——————————————— {'ENCRYPTING' if encr else 'DECRYPTING'} ——————————————— "

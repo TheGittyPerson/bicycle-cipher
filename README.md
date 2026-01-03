@@ -21,7 +21,9 @@ The Bicycle cipher is a simple, time-based cipher built on top of a [Caesar ciph
 e.g.
 ```
 Text:  Hi, Python!
-Index: 12  345678   <- the space, comma, and exclamation marks are not counted (Odd characters: H, P, t, o; Even characters; i, y, h, n)
+Index: 12  345678   <- the space, comma, and exclamation marks are not counted
+
+(Odd characters: H, P, t, o; Even characters; i, y, h, n)
 
 ```
 

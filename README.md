@@ -2,6 +2,12 @@
 
 This is a Python module for encrypting and decrypting Bicycle cipher messages.
 
+To use the program:
+- Ensure you have a Python interpreter installed on your system **(version 3.12+ recommended)**
+- Download both **`bicycle.py` and `caesar.py`**
+- Run `bicycle.py` to use the example encrypter
+- _(You can also run `caesar.py` to try using the Ceaser cipher encrypter)_
+
 This project is intended for educational (fun) purposes only.
 
 ## The Bicycle cipher
@@ -202,7 +208,7 @@ if __name__ == "__main__":
 
 ## Project structure
 - `bicycle.py` — contains the Bicycle cipher encrypter/decrypter
-- `caesar.py` – contains the Caesar cipher encrypter/decrypter, which is required and imported by `bicycle.py`
+- `caesar.py` – contains the Caesar cipher encrypter/decrypter, **which is required** and imported by `bicycle.py`
 
 ## License
 

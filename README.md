@@ -16,7 +16,14 @@ The Bicycle cipher is a simple, time-based cipher built on top of a [Caesar ciph
 
 **STEP 1:** The whole text is ciphered using a Caesar cipher with the current day of the month as the key (1~31).
 
-**STEP 2:** Every odd alphabetical character is ciphered using the current month as the key (1~12) and every even alphabetical character using the current year as the key (e.g., 2025). **Non-alphabetical characters are ignored and not indexed.**
+**STEP 2:** Every odd alphabetical character is ciphered using the current month as the key (1~12) and every even alphabetical character using the current year as the key (e.g., 2025). **Non-alphabetical characters are not indexed and are unaffected, and are directly passed to the next step.**
+
+e.g.
+```
+Text:  Hi, Python!
+Index: 12  345678   <- the space, comma, and exclamation marks are not counted (Odd characters: H, P, t, o; Even characters; i, y, h, n)
+
+```
 
 **STEP 3:** The text is reversed.
 

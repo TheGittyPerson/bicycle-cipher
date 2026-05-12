@@ -228,7 +228,7 @@ if __name__ == "__main__":
         sleep(0.5)
         print(
             "\n* --------------------------------------- *\n"
-            "ℹ️ HOW TO USE:\n"
+            "ℹ️  HOW TO USE:\n"
             "- Enter the text to encrypt or decrypt with the Bicycle cipher.\n"
             "- Enter a forward slash ('/') at any time to switch between cipher/decipher.\n"
             "- Enter '*' at any time to toggle clock mode.\n"
@@ -315,7 +315,7 @@ if __name__ == "__main__":
                     output = cipher(txt) if encrypting else decipher(txt)
 
                 if output is not None:
-                    print(f"\n{"Encrypted" if encrypting else "Decrypted"} text:")
+                    print(f"\n{'Encrypted' if encrypting else 'Decrypted'} text:")
                     print(output)
 
     except KeyboardInterrupt:

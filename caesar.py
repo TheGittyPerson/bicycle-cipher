@@ -94,7 +94,8 @@ def cipher_table(steps: int) -> dict[str, str]:
     effective_steps = steps % len(alphabet)
 
     try:
-        rotated_alphabet = alphabet[effective_steps:] + alphabet[:effective_steps]
+        rotated_alphabet = (alphabet[effective_steps:]
+                            + alphabet[:effective_steps])
     except TypeError:
         raise TypeError("Parameter 'steps' must be an integer.")
 
@@ -123,7 +124,7 @@ if __name__ == "__main__":
         
         "\nExample with a left shift of 3 (key=-3):\n"
         "\t'Hello, world!' → 'Ebiil, tloia!'\n"
-        "\t'This is an English sentence.' → 'Qefp fp xk Bkdifpe pbkqbkzb."
+        "\t'This is an English sentence.' → 'Qefp fp xk Bkdifpe pbkqbkzb.'"
         "\n* --------------------------------------- *"
     )
 
@@ -142,9 +143,13 @@ if __name__ == "__main__":
                         break
                     while True:
                         try:
-                            ky = int(input("Enter key ('/' to return to menu): "))
+                            ky = int(
+                                input("Enter key ('/' to return to menu): ")
+                            )
                         except ValueError:
-                            print("\nInvalid choice. Please enter an integer.\n")
+                            print(
+                                "\nInvalid choice. Please enter an integer.\n"
+                            )
                             sleep(0.5)
                         else:
                             break
@@ -160,7 +165,9 @@ if __name__ == "__main__":
                         try:
                             ky = int(input("Enter key: "))
                         except ValueError:
-                            print("\nInvalid choice. Please enter an integer.\n")
+                            print(
+                                "\nInvalid choice. Please enter an integer.\n"
+                            )
                             sleep(0.5)
                         else:
                             break

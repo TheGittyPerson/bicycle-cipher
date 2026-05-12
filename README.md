@@ -2,7 +2,7 @@
 
 This is a Python module for encrypting and decrypting Bicycle cipher messages.
 
-To use the program:
+**To use the program:**
 - Ensure you have a Python interpreter installed on your system **(version 3.12+ recommended)**
 - Download both **`bicycle.py` and `caesar.py`**
 - Run `bicycle.py` to use the example encrypter
@@ -36,8 +36,8 @@ Index: 12  345678   <- the space, comma, and exclamation marks are not counted
 (Extracted from Wikipedia: https://en.wikipedia.org/wiki/Caesar_cipher)
         
 Example with a left shift of 3 (key=-3):
-    'Hello, world!' → 'Ebiil, tloia!'
-    'This is an English sentence.' → 'Qefp fp xk Bkdifpe pbkqbkzb.'
+- 'Hello, world!' → 'Ebiil, tloia!'
+- 'This is an English sentence.' → 'Qefp fp xk Bkdifpe pbkqbkzb.'
 
 ## Reference
 

@@ -1,4 +1,4 @@
-# bicycle-cipher
+# bicycle-cipher 🚲
 
 This is a Python module for encrypting and decrypting Bicycle cipher messages.
 
